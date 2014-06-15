@@ -5,7 +5,6 @@ The unreliable UDP Client and Server simulates random packet drops at the Server
 
 import socket
 import sys
-from _socket import SOCK_DGRAM
 import random
 
 
@@ -20,7 +19,7 @@ class bcolors:
 PORT = 1060
 MAX = 65535
 
-s = socket.socket(socket.AF_INET, SOCK_DGRAM)
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 print '%r also %r' % (sys.argv[1], len(sys.argv))
 
